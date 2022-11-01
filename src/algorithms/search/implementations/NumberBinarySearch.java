@@ -5,7 +5,7 @@ import algorithms.search.Search;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-public class BinarySearch implements Search<Integer[], Integer> {
+public class NumberBinarySearch implements Search<Integer[], Integer, Integer> {
 
     @Override
     public Integer search(Integer[] resource, Predicate<Integer> condition) {
@@ -16,8 +16,10 @@ public class BinarySearch implements Search<Integer[], Integer> {
     public Integer search(Integer[] resource, Integer target) {
         int start = 0;
         int end = resource.length - 1;
+        int stepCount = 1;
 
         while(start <= end) {
+            System.out.println("Step " + stepCount++);
 
             int mid = (end + start) / 2;
             int guess = resource[mid];
