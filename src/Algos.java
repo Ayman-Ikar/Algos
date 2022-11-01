@@ -9,7 +9,10 @@ import java.util.List;
 public class Algos {
 
     public static void main(String[] args) {
+        binarySearchTest();
+    }
 
+    public static void binarySearchTest() {
         System.out.println("*************************************");
         System.out.println("Binary search with an integer");
         System.out.println("*************************************");
@@ -45,5 +48,7 @@ public class Algos {
         System.out.println(stringBinarySearch.search(sampleList, "eeeee"));
         // the highest value
         System.out.println(stringBinarySearch.search(sampleList, "zzzzz"));
+        // empty string ?
+        System.out.println(stringBinarySearch.search(sampleList, ""));
     }
 }
